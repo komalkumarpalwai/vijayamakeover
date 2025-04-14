@@ -1,22 +1,27 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import path from 'path';
+
 
 export default defineConfig({
-  base: '/komal_solution/', // Root URL for your GitHub Pages repository
+  base: '/komal_solution/', // GitHub Pages base path
   resolve: {
     alias: {
-      'react-refresh/babel': path.resolve('./node_modules/react-refresh/babel.js'),
+      // Remove this unnecessary alias (Vite handles react-refresh automatically)
+      // 'react-refresh/babel': path.resolve('./node_modules/react-refresh/babel.js'),
     },
   },
   plugins: [react()],
   build: {
     rollupOptions: {
-      external: ['lenis'], // Treat lenis as an external module
+      // Remove lenis from external (unless you're loading it via CDN)
+      // external: ['lenis'],
     },
   },
   server: {
-    // You can use 'all' to allow any hosts or specify multiple allowed hosts as an array
-    allowedHosts: ['komal-solution.onrender.com'],
+    // Update allowedHosts configuration
+    allowedHosts: [
+      'komal-solution.onrender.com',
+      'localhost' // Add localhost for local development
+    ]
   },
 });

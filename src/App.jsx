@@ -11,7 +11,7 @@ import 'swiper/css/pagination';
 
 const App = () => {
   return (
-    <Router basename="/Vijayaa-Makeovers_web">
+    <Router basename="/komal_solution">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<Services />} />

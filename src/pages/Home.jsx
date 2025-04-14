@@ -10,7 +10,6 @@ const Home = () => {
     <div className="flex flex-col min-h-screen bg-black overflow-x-hidden">
       <Header />
 
-      {/* Hero Section */}
       <main className="relative h-[100vh] w-full">
         <div
           className="absolute inset-0 bg-cover bg-center z-0"
@@ -42,7 +41,6 @@ const Home = () => {
         </div>
       </main>
 
-      {/* Featured Card Section */}
       <section className="bg-black py-16 px-4">
         <div className="max-w-5xl mx-auto space-y-8">
           <div className="bg-white/5 rounded-2xl overflow-hidden shadow-lg hover:shadow-orange-500/30 transition-all duration-300 transform hover:scale-105">
@@ -78,7 +76,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Testimonials Section */}
       <section className="bg-gradient-to-r from-black via-gray-900 to-black py-16 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl text-white font-bold text-center mb-10">What Our Clients Say</h2>
@@ -117,12 +114,10 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Video Gallery Section */}
       <section className="py-16 px-4 bg-gray-900">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-4xl text-white font-bold mb-10">Our Transformation Videos</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<<<<<<< HEAD
             {[v1, v2, v3].map((videoSrc, index) => (
               <video
                 key={index}
@@ -135,37 +130,10 @@ const Home = () => {
                 onMouseLeave={(e) => e.target.pause()}
               />
             ))}
-=======
-            <iframe
-              className="w-full h-64 sm:h-80 rounded-xl"
-              src="https://youtu.be/shGoWvoCg-A?si=LRtuktzhpk1e2s61"
-              title="Video 1"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
-            <iframe
-              className="w-full h-64 sm:h-80 rounded-xl"
-              src="https://youtu.be/shGoWvoCg-A?si=LRtuktzhpk1e2s61"
-              title="Video 2"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
-            <iframe
-              className="w-full h-64 sm:h-80 rounded-xl"
-              src="https://youtu.be/shGoWvoCg-A?si=LRtuktzhpk1e2s61"
-              title="Video 3"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
->>>>>>> 3ded910 (Merged remote changes)
           </div>
         </div>
       </section>
 
-      {/* Google Map Embed Section */}
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-4xl text-white font-bold mb-10">Visit Us</h2>
