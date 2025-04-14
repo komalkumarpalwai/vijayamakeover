@@ -16,10 +16,6 @@ export default defineConfig({
     },
   },
   server: {
-    host: '0.0.0.0',
-    allowedHosts: [
-      'makeover-web-2.onrender.com',
-      'localhost',
-    ],
+    allowedHosts: ['komal-solution.onrender.com'],
   },
 });
