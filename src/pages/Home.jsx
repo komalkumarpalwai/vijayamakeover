@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import v1 from '../assets/v1.mp4';
@@ -10,6 +11,7 @@ const Home = () => {
     <div className="flex flex-col min-h-screen bg-black overflow-x-hidden">
       <Header />
 
+      {/* Hero Section */}
       <main className="relative h-[100vh] w-full">
         <div
           className="absolute inset-0 bg-cover bg-center z-0"
@@ -22,7 +24,7 @@ const Home = () => {
 
         <div className="relative z-10 flex items-center h-full px-4 sm:px-10 md:px-20 max-w-screen-xl mx-auto">
           <div className="text-left text-white max-w-2xl">
-            <h1 className="text-5xl md:text-6xl font-extrabold font-poppins text-gold mb-4 leading-tight drop-shadow-lg">
+            <h1 className="text-5xl md:text-6xl font-extrabold font-poppins text-yellow-400 mb-4 leading-tight drop-shadow-lg">
               Vijayaa Makeovers
             </h1>
             <h2 className="text-2xl md:text-3xl font-medium text-white/90 mb-4 leading-snug">
@@ -31,16 +33,17 @@ const Home = () => {
             <p className="text-lg text-white/70 mb-8 leading-relaxed">
               Pamper yourself with expert beauty services and personalized care designed to highlight your natural elegance.
             </p>
-            <a
-              href="/services"
-              className="inline-block px-8 py-3 rounded-full text-lg font-semibold text-black bg-gradient-to-r from-amber-400 via-orange-400 to-yellow-300 hover:from-yellow-400 hover:to-orange-500 transition-all duration-300 shadow-lg hover:shadow-xl animate-glow"
+            <Link
+              to="/services"
+              className="bg-gray-100  inline-block px-8 py-3 rounded-full text-lg font-semibold text-white bg-light-gray hover:shadow-lg transition-all duration-300"
             >
               Book a Service Now
-            </a>
+            </Link>
           </div>
         </div>
       </main>
 
+      {/* Featured Section */}
       <section className="bg-black py-16 px-4">
         <div className="max-w-5xl mx-auto space-y-8">
           <div className="bg-white/5 rounded-2xl overflow-hidden shadow-lg hover:shadow-orange-500/30 transition-all duration-300 transform hover:scale-105">
@@ -55,27 +58,28 @@ const Home = () => {
                 <p className="text-white/80 mb-4">
                   Experience the magic of transformation with our premium bridal makeover. A perfect blend of elegance, grace, and flawless beauty for your special day.
                 </p>
-                <a
-                  href="/service"
-                  className="inline-block mt-2 px-6 py-2 rounded-full bg-orange-500 hover:bg-orange-600 text-white font-semibold transition-all duration-300 shadow-md"
+                <Link
+                  to="/services"
+                  className="bg-gray-100  inline-block mt-2 px-6 py-2 rounded-full text-white font-semibold bg-light-gray hover:shadow-lg transition-all duration-300"
                 >
                   Book This Service
-                </a>
+                </Link>
               </div>
             </div>
           </div>
 
           <div className="text-center">
-            <a
-              href="/services"
-              className="inline-block px-8 py-3 rounded-full text-lg font-semibold text-white bg-orange-500 hover:bg-orange-600 transition-all duration-300 shadow-lg"
+            <Link
+              to="/services"
+              className="bg-gray-100  inline-block px-8 py-3 rounded-full text-lg font-semibold text-white bg-light-gray hover:shadow-lg transition-all duration-300"
             >
               View More Services
-            </a>
+            </Link>
           </div>
         </div>
       </section>
 
+      {/* Testimonials */}
       <section className="bg-gradient-to-r from-black via-gray-900 to-black py-16 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl text-white font-bold text-center mb-10">What Our Clients Say</h2>
@@ -104,7 +108,7 @@ const Home = () => {
                 <img
                   src={testimonial.image}
                   alt={testimonial.name}
-                  className="w-16 h-16 rounded-full mx-auto mb-4"
+                  className="w-16 h-16 rounded-full mx-auto mb-4 border-2 border-orange-400"
                 />
                 <h3 className="text-xl font-semibold mb-2">{testimonial.name}</h3>
                 <p className="text-sm text-white/80">{testimonial.feedback}</p>
@@ -114,6 +118,7 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Videos */}
       <section className="py-16 px-4 bg-gray-900">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-4xl text-white font-bold mb-10">Our Transformation Videos</h2>
@@ -134,6 +139,7 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Map Section */}
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-4xl text-white font-bold mb-10">Visit Us</h2>
@@ -150,7 +156,7 @@ const Home = () => {
             href="https://www.google.com/maps/dir//2nd+Floor,+Telangana+Co-Operative+Bank,+Bhramhanpally+X+Road,+Near+KB+School,+Turkayamjal,+Hyderabad,+Telangana"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block mt-4 px-8 py-3 rounded-full text-lg font-semibold text-white bg-orange-500 hover:bg-orange-600 transition-all duration-300 shadow-lg"
+            className="inline-block mt-4 px-8 py-3 rounded-full text-lg font-semibold text-white  bg-gray-100 hover:shadow-lg transition-all duration-300"
           >
             Get Directions
           </a>

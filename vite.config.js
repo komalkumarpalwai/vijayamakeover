@@ -2,7 +2,7 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
 export default defineConfig({
-  base: '/komal_solution/',
+  base: '/',
   plugins: [react()],
   server: {
     host: '0.0.0.0', // Expose on all network interfaces

@@ -2,7 +2,7 @@ import React from 'react';
 import { FiMapPin, FiPhone, FiClock, FiInstagram, FiFacebook } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 import logo from '../assets/logo.jpg';
-import '../styles/footer.css'; // Make sure this path matches your project structure
+import '../styles/footer.css';
 
 const Footer = () => {
   return (
@@ -23,10 +23,20 @@ const Footer = () => {
             </div>
             <p className="text-gray-400">Transforming beauty with precision and care</p>
             <div className="flex space-x-4">
-              <a href="https://www.instagram.com/vijayaa_makeovers" className="text-white hover:text-orange-500 transition-colors">
+              <a 
+                href="https://www.instagram.com/vijayaa_makeovers" 
+                className="text-white hover:text-orange-500 transition-colors"
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
                 <FiInstagram size={24} />
               </a>
-              <a href="https://www.instagram.com/vijayaa_makeovers" className="text-white hover:text-orange-500 transition-colors">
+              <a 
+                href="https://www.facebook.com/vijayaa_makeovers" 
+                className="text-white hover:text-orange-500 transition-colors"
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
                 <FiFacebook size={24} />
               </a>
             </div>
@@ -36,14 +46,18 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="text-xl font-bold text-orange-500 mb-4">Quick Links</h3>
             <div className="flex flex-col space-y-3">
-              {['Home', 'Our Services', 'Pricing', 'About Us', 'Contact Us'].map((item) => (
+              {[
+                { label: 'Services', to: '/services' },
+                { label: 'About Us', to: '/about' },
+                { label: 'Contact', to: '/contact' },
+              ].map(({ label, to }) => (
                 <Link
-                  key={item}
-                  to={`/${item.toLowerCase().replace(' ', '')}`}
+                  key={label}
+                  to={to}
                   className="text-white/90 hover:text-orange-500 transition-colors group w-fit"
                 >
                   <span className="relative">
-                    {item}
+                    {label}
                     <span className="absolute bottom-0 left-0 w-0 h-px bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
                   </span>
                 </Link>
@@ -83,9 +97,9 @@ const Footer = () => {
           <p className="text-gray-400">
             © Vijayaa Makeovers 2025. All Rights Reserved.
             <span className="mx-4">|</span>
-            <a href="/privacy" className="hover:text-orange-500 transition-colors">Privacy Policy</a>
+            <Link to="/privacy" className="hover:text-orange-500 transition-colors">Privacy Policy</Link>
             <span className="mx-4">|</span>
-            <a href="/terms" className="hover:text-orange-500 transition-colors">Terms of Service</a>
+            <Link to="/terms" className="hover:text-orange-500 transition-colors">Terms of Service</Link>
           </p>
         </div>
       </div>
