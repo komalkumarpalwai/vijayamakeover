@@ -6,7 +6,9 @@ export default defineConfig({
   plugins: [react()],
   server: {
     host: '0.0.0.0', // Expose on all network interfaces
-    // port: process.env.PORT || 5173, // Uncomment if needed for Render
-    allowedHosts: 'all' // Simplified version to allow all hosts
+    allowedHosts: 'all', // Simplified version to allow all hosts
+  },
+  preview: {
+    allowedHosts: ['vijayamakeover.onrender.com'], // Allow this host
   }
 });
